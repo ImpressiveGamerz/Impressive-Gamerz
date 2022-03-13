@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            display: flex;
+            background-color: black;
+            height: 9em;
+            border: none solid black;
+            border-radius: 4em;
+            position: sticky;
+            width: 93em;
+            opacity: .9;
+        }
+        ul {
+            display: flex;
+            margin-left: 3em;
+        }
+        li {
+            color: white;
+            list-style: none;
+            margin-left: 0em;
+            margin-right: 3em;
+            font-size: 1.3em;
+            margin-top: 2em;
+            
+        }
+        li :hover {
+            color: black;
+            text-decoration: underline;
+            border: none solid black;
+            border-radius: 0.2em;
+        }
+        a.nav {
+            text-decoration: none;
+            width: 16em;
+            height: 5em;
+            color: black;
+            -webkit-text-stroke: 1px #fff;
+        }
+        input {
+            height: 3em;
+            width: 23em;
+            border: 2px solid white;
+            border-radius: 2em;
+            margin-top: 3em;
+            font-style: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin-left: 7em;
+            background: none;
+            outline: none;
+            color: white;
+        }
+        ::-webkit-input-placeholder {
+            -webkit-text-stroke: 1px #fff;
+        }
+        img#search {
+            height: 2em;
+            width: 2em;
+            margin-top: 3em;
+            margin-left: 0.8em;
+        }
+        li#zues {
+            background-color: red;
+            height: 1em;
+            display: none;
+        }
+        embed  {
+            height: 20em;
+            width: 28em;
+            margin-left: 2em;
+            float: left;
+        }
+        p {
+            border: 2px solid white;
+            width: 20em;
+            margin-bottom: 0;
+            margin-left: 1em;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .main {
+            border: 0.5em solid black;
+            width: 35em;
+            margin-top: 2em;
+            height: 28em;
+            margin-bottom: 3em;
+            margin-left: 6em;
+        }
+        #head {
+            display: flex;
+            align-items: center;
+        }
+        .fix {
+            display: flex;
+            border: 0.5em solid black;
+            width: 35em;
+            margin-top: 2em;
+            height: 28em;
+            margin-bottom: 3em;
+            margin-left: 6em;
+        }
+        #fixtwo {
+            border: 2px solid white;
+            width: 20em;
+            margin-bottom: 0;
+            margin-left: 1em;
+            text-align: center;
+            font-size: 1.5em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #headd {
+            display: flex;
+        }
+        #ab {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="nav"href="C:\Users\EKNOOR\OneDrive\Desktop\Languages\HTML+CSS Projects\Project-3/index4.html">HOME</a></li>
+            <li><a id="ab"class="nav"href="C:\Users\EKNOOR\OneDrive\Desktop\Languages\HTML+CSS Projects\Project-3/index.html">VIDEOS</a></li>
+           <li><a class="nav"href="C:\Users\EKNOOR\OneDrive\Desktop\Languages\HTML+CSS Projects\Project-3/index3.html">CONTACT US</a></li>
+            <li><a class="nav"href="C:\Users\EKNOOR\OneDrive\Desktop\Languages\HTML+CSS Projects\Project-3/index2.html">ABOUT US</a></li>
+        </ul>
+        <input type="text"placeholder="What Are You Looking For?">
+        <img id="search" src="data:image/png;base64,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">
+    </nav>
+    <div id="head">
+    <div class="main">
+        <p>@GamerFleet House Blasted In Herobrine Smp @The RawKnee Games Reaction On Blasted House</p>
+        <embed src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+        <br>
+        </div>
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+        <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+        </div>
+        </div>
+        <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+    <div id="headd">
+        <div class="main">
+            <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+            <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    <div class="main">
+        <p>@Gamerfleet kidnapped  @Chapati Hindustani Gamer  In Herobrine Smp HELP CHAPATI HINDUSTANI GAMER😂🤣</p>
+    <embed id="scnd"src="https://www.youtube.com/embed/PKi2G9dg64c"controls autoplay loop></embed>
+    </div>
+    </div>
+</body>
+</html>
